@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    content: " ";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #ff00cb, #ff0000);
+    filter: sepia(8px);
+    }
+
+.container{
+    position: relative;
+   }
+.clock{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-image: url(music.PNG);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 4px 4px 40px rgba(232, 109, 2, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))); 
+    inset: 12px;
+    text-align: center;
+    color: #000000d4;
+}
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000000d4;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
